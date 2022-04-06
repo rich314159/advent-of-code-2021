@@ -62,7 +62,7 @@ def main():
 
     data = read_data()
     invalids = [invalid_found(row) for row in data]
-    print(invalids[0:50])
+    # print(invalids[0:50])
     valids = [d for d, i in zip(data, invalids) if not i]
     # print(valids[0:5])
     # print([SCORE[d] if d else 0 for d in invalids[0:50]])
@@ -73,7 +73,7 @@ def main():
     # test = get_matches(data[1])
     # print([SCORE2[d] for d in test])
     print(f"Match score: {get_match_score(valids[0])}")
-    print(valids[0])
+    # print(valids[0])
     scores = [get_match_score(d) for d in valids]
 
     scores.sort()
